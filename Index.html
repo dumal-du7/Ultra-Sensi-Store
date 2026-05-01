@@ -1,0 +1,365 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultra Sensi Store</title>  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #000000;
+      background-image: radial-gradient(circle at top, #3b0000 0%, #000000 70%);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 8%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid red;
+      z-index: 1000;
+    }
+
+    .logo {
+      color: red;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 0 0 15px red;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: red;
+    }
+
+    section {
+      padding: 120px 8% 80px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(to bottom, #2b0000, #000000);
+    }
+
+    .hero h1 {
+      font-size: 70px;
+      color: red;
+      text-shadow: 0 0 25px red;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px red;
+      }
+
+      to {
+        text-shadow: 0 0 35px red;
+      }
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #ccc;
+      max-width: 800px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 35px;
+      background: red;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 20px red;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      background: #cc0000;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 50px;
+      color: red;
+      margin-bottom: 60px;
+      text-shadow: 0 0 20px red;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid red;
+      padding: 40px 30px;
+      border-radius: 25px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
+    }
+
+    .card h3 {
+      font-size: 35px;
+      color: red;
+    }
+
+    .card p {
+      margin-top: 15px;
+      color: #bbb;
+      font-size: 18px;
+    }
+
+    .price {
+      margin-top: 20px;
+      font-size: 45px;
+      font-weight: bold;
+    }
+
+    .support-box,
+    .social-box {
+      background: #111;
+      border: 1px solid red;
+      padding: 40px;
+      border-radius: 25px;
+      text-align: center;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      border-top: 1px solid red;
+      color: #888;
+    }
+
+    .floating {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      background: red;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 25px red;
+      animation: pulse 1.5s infinite;
+      z-index: 1000;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 45px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+    }
+  </style></head><body style="background:#000;color:white;">  <header>
+    <div class="logo">Ultra Sensi Store</div><nav>
+  <a href="#inicio">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#suporte">Suporte</a>
+  <a href="#redes">Redes</a>
+</nav>
+
+  </header>  <section class="hero" id="inicio" style="background:linear-gradient(to bottom,#3b0000,#000000);">
+    <div>
+      <h1>BEM-VINDO</h1><p>
+    A melhor loja de sensi personalizada para elevar sua gameplay.
+    Qualidade, rapidez e suporte profissional.
+  </p>
+
+  <a class="btn" href="#produtos">
+    VER PRODUTOS
+  </a>
+</div>
+
+  </section>  <section id="produtos">
+    <h2 class="title">Produtos</h2><div class="products">
+
+  <div class="card">
+    <h3>Sensi Rara Ultra</h3>
+
+    <p>
+      Configuração premium para máxima precisão e desempenho.
+    </p>
+
+    <div class="price">R$6</div>
+
+    <a class="btn" href="https://wa.me/558291799920" target="_blank">
+      Comprar Agora
+    </a>
+  </div>
+
+  <div class="card">
+    <h3>Sensi Ultra</h3>
+
+    <p>
+      Melhor movimentação e mira com desempenho otimizado.
+    </p>
+
+    <div class="price">R$3</div>
+
+    <a class="btn" href="https://wa.me/558291799920" target="_blank">
+      Comprar Agora
+    </a>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin-top:60px;">
+  <a class="btn" href="https://wa.me/558291799920" target="_blank">
+    PAINEL FFH4X 
+  </a>
+</div>
+
+  </section>  <section id="suporte">
+    <h2 class="title">Suporte</h2><div class="support-box">
+  <h3 style="font-size:35px; color:red;">WhatsApp</h3>
+
+  <p style="margin-top:20px; font-size:28px;">
+    +55 (82) 91799-9920
+  </p>
+
+  <a class="btn" href="https://wa.me/558291799920" target="_blank">
+    Chamar Agora
+  </a>
+</div>
+
+  </section>  <section id="redes">
+    <h2 class="title">Redes Sociais</h2><div class="social-grid">
+
+  <div class="social-box">
+    <h3 style="font-size:35px; color:red;">Dono</h3>
+
+    <p style="margin-top:15px; color:#bbb;">
+      Instagram oficial do dono.
+    </p>
+
+    <a class="btn"
+      href="https://www.instagram.com/__wesleyxn_7?igsh=YzBtcDNyOHh4bHJr"
+      target="_blank">
+      Abrir Instagram
+    </a>
+  </div>
+
+  <div class="social-box">
+    <h3 style="font-size:35px; color:red;">
+      Ultra Sensi Store
+    </h3>
+
+    <p style="margin-top:15px; color:#bbb;">
+      Instagram oficial da loja.
+    </p>
+
+    <a class="btn"
+      href="https://www.instagram.com/ultrasensistore?igsh=djdzdWdwYzg4cHVh"
+      target="_blank">
+      Abrir Instagram
+    </a>
+  </div>
+
+</div>
+
+  </section>  <footer>
+    © 2026 Ultra Sensi Store - Todos os direitos reservados.
+  </footer>  <a class="floating" href="https://wa.me/558291799920" target="_blank">
+    ⚡
+  </a>  <script>
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach((card) => {
+      card.addEventListener('mousemove', () => {
+        card.style.transform = 'scale(1.03)';
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+
+      if (window.scrollY > 50) {
+        header.style.background = 'rgba(0,0,0,0.95)';
+      } else {
+        header.style.background = 'rgba(0,0,0,0.85)';
+      }
+    });
+  </script></body>
+</html>
